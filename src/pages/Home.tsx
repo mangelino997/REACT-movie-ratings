@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import Movie from '../components/Movie';
+import StarRating from '../customsHooks/StarRating';
 import moviesExamples from '../data/movies.json'
 import IconArrowRight from '../icons/arrowRight';  //npm install @types/react
 const Home = () => {
@@ -29,6 +30,7 @@ const Home = () => {
                 </div>
 
                 <p className="title-movies my-3">Ranking</p>
+                <StarRating/>
             </div>
         </>
     )

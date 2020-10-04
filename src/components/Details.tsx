@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useParams } from 'react-router';
+import StarRating from '../customsHooks/StarRating';
 import IconStars from '../icons/stars';
 import getMovieById from '../utils/getMovieById';
 
@@ -21,20 +22,10 @@ const Details = () => {
                         </div>
                     </div>
                 </div>
-                <div className="col-md-4">
-                    <div className="row justify-content-center">
-                        <div className="col text-center">
-                            <IconStars width={40} height={40}
-                                stroke="#FF8222" fill="#FF8222" />
-                            <IconStars width={40} height={40}
-                                stroke="#FF8222" fill="#FF8222" />
-                            <IconStars width={40} height={40}
-                                stroke="#FF8222" fill="#FF8222" />
-                            <IconStars width={40} height={40}
-                                stroke="#FF8222" fill="#FF8222" />
-                            <IconStars width={40} height={40}
-                                stroke="#FF8222" fill="#FF8222" />
-                        </div>
+                <div className="col-12 col-md-4">
+                    <div className="text-center">
+                        <h4>Rate this movie</h4>
+                        <StarRating />
                     </div>
                     <div className="row justify-content-center">
                         <div className="col">

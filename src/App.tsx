@@ -26,23 +26,16 @@ function App() {
               <div className="col-12 my-auto col-md-12 text-center">
                 {/* <img src={MovieGif}></img> */}
                 <p className="title-loading-movies text-pop-up-top">MOVIES</p>
-                <p className="title-loading-movies text-pop-up-top">RANKING</p>
+                <p className="title-loading-movies text-pop-up-top">RATING</p>
                 <div className="text-center">
-                  <IconStars className="roll-in-left-5" 
-                  width={50} height={50} 
-                  stroke="#FF8222" fill="#FF8222"/>
-                  <IconStars className="roll-in-left-4" 
-                  width={50} height={50} 
-                  stroke="#FF8222" fill="#FF8222"/>
-                  <IconStars className="roll-in-left-3" 
-                  width={50} height={50} 
-                  stroke="#FF8222" fill="#FF8222"/>
-                  <IconStars className="roll-in-left-2" 
-                  width={50} height={50} 
-                  stroke="#FF8222" fill="#FF8222"/>
-                  <IconStars className="roll-in-left-1" 
-                  width={50} height={50} 
-                  stroke="#FF8222" fill="#FF8222"/>
+                  {[...Array(5)].map((star: any, index: number) => {
+                    const i = 5 - index;
+                    return (
+                      <IconStars key={index} className={"roll-in-left-" + i}
+                        width={50} height={50}
+                        stroke="#FF8222" fill="#FF8222" />
+                    )
+                  })}
                 </div>
               </div>
             </div>
