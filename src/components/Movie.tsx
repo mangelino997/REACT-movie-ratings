@@ -13,7 +13,7 @@ const Movie = ({movie} : any) => {
                     <div className="flip-card-back">
                         <p className="title-back-card">{movie.fields.title}</p>
                         <Link to={`/details/${movie.pk}`} className="bottom-right">
-                            <span>more details</span><IconArrowRight />
+                            <span>details</span><IconArrowRight />
                         </Link>
 
                     </div>

@@ -17,7 +17,7 @@ const Home = () => {
                     <button className="btn btn-shadow btn-sm" type="submit">Search</button>
                 </div>
             </div>
-            <p className="title-movies my-1">All Movies</p>
+            <p className="title-movies my-1">Movies</p>
             <hr />
             <div>
                 <div className="row flex-nowrap overflow-auto">
@@ -28,7 +28,7 @@ const Home = () => {
                     }
                 </div>
 
-                <p className="title-movies my-3">Rank List</p>
+                <p className="title-movies my-3">Ranking</p>
             </div>
         </>
     )

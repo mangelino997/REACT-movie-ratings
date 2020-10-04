@@ -23,10 +23,10 @@ function App() {
         <div className="App bg-color-red">
           <div className="container container-loading">
             <div className="row justify-content-center align-items-center ">
-              <div className="col-12 my-auto col-md-12">
+              <div className="col-12 my-auto col-md-12 text-center">
                 {/* <img src={MovieGif}></img> */}
-                <p className="title-loading-movies text-pop-up-top">MOVIE</p>
-                <p className="title-loading-movies text-pop-up-top">RANK</p>
+                <p className="title-loading-movies text-pop-up-top">MOVIES</p>
+                <p className="title-loading-movies text-pop-up-top">RANKING</p>
                 <div className="text-center">
                   <IconStars className="roll-in-left-5" 
                   width={50} height={50} 
