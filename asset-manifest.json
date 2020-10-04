@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/REACT-movie-ratings/static/css/main.71d1980e.chunk.css",
+    "main.css": "/REACT-movie-ratings/static/css/main.d383edf8.chunk.css",
     "main.js": "/REACT-movie-ratings/static/js/main.0604c996.chunk.js",
     "main.js.map": "/REACT-movie-ratings/static/js/main.0604c996.chunk.js.map",
     "runtime-main.js": "/REACT-movie-ratings/static/js/runtime-main.70897cc7.js",
@@ -8,9 +8,9 @@
     "static/js/2.3f9b5313.chunk.js": "/REACT-movie-ratings/static/js/2.3f9b5313.chunk.js",
     "static/js/2.3f9b5313.chunk.js.map": "/REACT-movie-ratings/static/js/2.3f9b5313.chunk.js.map",
     "index.html": "/REACT-movie-ratings/index.html",
-    "precache-manifest.600ea4c1a173fa850289817b9c1e7d39.js": "/REACT-movie-ratings/precache-manifest.600ea4c1a173fa850289817b9c1e7d39.js",
+    "precache-manifest.0ab4fec1e38c490758642be4f0e1bc58.js": "/REACT-movie-ratings/precache-manifest.0ab4fec1e38c490758642be4f0e1bc58.js",
     "service-worker.js": "/REACT-movie-ratings/service-worker.js",
-    "static/css/main.71d1980e.chunk.css.map": "/REACT-movie-ratings/static/css/main.71d1980e.chunk.css.map",
+    "static/css/main.d383edf8.chunk.css.map": "/REACT-movie-ratings/static/css/main.d383edf8.chunk.css.map",
     "static/js/2.3f9b5313.chunk.js.LICENSE.txt": "/REACT-movie-ratings/static/js/2.3f9b5313.chunk.js.LICENSE.txt",
     "static/media/error-404.png": "/REACT-movie-ratings/static/media/error-404.2df31fb3.png",
     "static/media/no-img.png": "/REACT-movie-ratings/static/media/no-img.5405d77c.png"
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.70897cc7.js",
     "static/js/2.3f9b5313.chunk.js",
-    "static/css/main.71d1980e.chunk.css",
+    "static/css/main.d383edf8.chunk.css",
     "static/js/main.0604c996.chunk.js"
   ]
 }
