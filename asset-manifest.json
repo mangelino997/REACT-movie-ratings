@@ -1,24 +1,26 @@
 {
   "files": {
-    "main.css": "/REACT-movie-ratings/static/css/main.229d9816.chunk.css",
-    "main.js": "/REACT-movie-ratings/static/js/main.5c361d98.chunk.js",
-    "main.js.map": "/REACT-movie-ratings/static/js/main.5c361d98.chunk.js.map",
+    "main.css": "/REACT-movie-ratings/static/css/main.901cd10f.chunk.css",
+    "main.js": "/REACT-movie-ratings/static/js/main.f2859ff5.chunk.js",
+    "main.js.map": "/REACT-movie-ratings/static/js/main.f2859ff5.chunk.js.map",
     "runtime-main.js": "/REACT-movie-ratings/static/js/runtime-main.70897cc7.js",
     "runtime-main.js.map": "/REACT-movie-ratings/static/js/runtime-main.70897cc7.js.map",
-    "static/js/2.1832597d.chunk.js": "/REACT-movie-ratings/static/js/2.1832597d.chunk.js",
-    "static/js/2.1832597d.chunk.js.map": "/REACT-movie-ratings/static/js/2.1832597d.chunk.js.map",
+    "static/js/2.14723a25.chunk.js": "/REACT-movie-ratings/static/js/2.14723a25.chunk.js",
+    "static/js/2.14723a25.chunk.js.map": "/REACT-movie-ratings/static/js/2.14723a25.chunk.js.map",
     "index.html": "/REACT-movie-ratings/index.html",
-    "precache-manifest.332ca09b35e97a0f045437b8acaa4317.js": "/REACT-movie-ratings/precache-manifest.332ca09b35e97a0f045437b8acaa4317.js",
+    "precache-manifest.f4709a2237a49d36db9f9bc420b610ea.js": "/REACT-movie-ratings/precache-manifest.f4709a2237a49d36db9f9bc420b610ea.js",
     "service-worker.js": "/REACT-movie-ratings/service-worker.js",
-    "static/css/main.229d9816.chunk.css.map": "/REACT-movie-ratings/static/css/main.229d9816.chunk.css.map",
-    "static/js/2.1832597d.chunk.js.LICENSE.txt": "/REACT-movie-ratings/static/js/2.1832597d.chunk.js.LICENSE.txt",
+    "static/css/main.901cd10f.chunk.css.map": "/REACT-movie-ratings/static/css/main.901cd10f.chunk.css.map",
+    "static/js/2.14723a25.chunk.js.LICENSE.txt": "/REACT-movie-ratings/static/js/2.14723a25.chunk.js.LICENSE.txt",
     "static/media/error-404.png": "/REACT-movie-ratings/static/media/error-404.2df31fb3.png",
-    "static/media/no-img.png": "/REACT-movie-ratings/static/media/no-img.5405d77c.png"
+    "static/media/no-img.png": "/REACT-movie-ratings/static/media/no-img.5405d77c.png",
+    "static/media/popcorn.png": "/REACT-movie-ratings/static/media/popcorn.df41da6b.png",
+    "static/media/popcorn2.png": "/REACT-movie-ratings/static/media/popcorn2.6d4b23b5.png"
   },
   "entrypoints": [
     "static/js/runtime-main.70897cc7.js",
-    "static/js/2.1832597d.chunk.js",
-    "static/css/main.229d9816.chunk.css",
-    "static/js/main.5c361d98.chunk.js"
+    "static/js/2.14723a25.chunk.js",
+    "static/css/main.901cd10f.chunk.css",
+    "static/js/main.f2859ff5.chunk.js"
   ]
 }
