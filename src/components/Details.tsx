@@ -13,35 +13,42 @@ const Details = () => {
     return (
         <div className="container">
             <div className="row justify-content-center py-2">
-                <div className="col-12 col-md-4">
-                    <div className="card swing-in-top-fwd ">
+                <div className="col-12 col-md-6">
+                    <img className="card swing-in-top-fwd card-img-bottom"
+                        src={movie?.imageURL}
+                        alt="Card image cap" />
+                    {/* <div className="card swing-in-top-fwd ">
                         <img className="card-img-bottom" src={movie?.imageURL} alt="Card image cap" />
                         <div className="card-body">
                             <h5 className="card-title">{movie?.fields.title}</h5>
                             <small>{movie?.fields.director}</small>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
                 <div className="col-12 col-md-4">
                     <div className="text-center">
-                        <h4>Rate this movie</h4>
+                        <h1 className="card-title">{movie?.fields.title}</h1>
+                        <h6>{movie?.fields.director}</h6>
+                    </div>
+                    <div className="text-center py-3">
+                        {/* <h5>Rate this movie</h5> */}
                         <StarRating />
                     </div>
-                    <div className="row justify-content-center">
+                    <div className="row justify-content-center text-center">
                         <div className="col">
-                            <small>Year</small>
                             <h5>{movie?.fields.year}</h5>
+                            <small>Year</small>
                         </div>
                         <div className="col">
-                            <small>Rated</small>
                             <h5>{movie?.fields.rated}</h5>
+                            <small>Rated</small>
                         </div>
                         <div className="col">
-                            <small>Rating</small>
                             <h5>{movie?.fields.rating}</h5>
+                            <small>Rating</small>
                         </div>
                     </div>
-                    <div className="">
+                    <div className="text-center py-3">
                         <p className="card-text">{movie?.fields.plot}</p>
                     </div>
                 </div>

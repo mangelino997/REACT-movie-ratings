@@ -12,7 +12,7 @@ const StarRating = (props: any) => {
     }, [rating])
     return (
         <div>
-            {[...Array(5)].map((star: any, index: any) => {
+            {[...Array(10)].map((star: any, index: any) => {
                 const ratingValue = index + 1;
                 return (
                     <label key={index}>
@@ -22,7 +22,7 @@ const StarRating = (props: any) => {
                         />
                         <IconStars
                             className="star"
-                            width={40} height={40}
+                            width={26} height={26}
                             stroke={ratingValue <= (rating || hover) ? "#FF8222" : null}
                             fill={ratingValue <= (rating || hover) ? "#FF8222" : null}
                             onMouseEnter={() => setHover(ratingValue)}
@@ -33,6 +33,10 @@ const StarRating = (props: any) => {
             })}
             <div className="text-center">
                 <h4>{rating} stars</h4>
+                <button 
+                type="button" className="btn btn-sm btn-success btn-login">
+                    Rate
+                </button>
                 <button
                     className="btn-reset-stars"
                     onClick={() => setRating(0)}>

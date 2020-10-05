@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import NavBar from './components/NavBar';
+import { MoviesProvider } from './context/MoviesContext';
+import { UserProvider } from './context/UserContext';
 import IconStars from './icons/stars';
 
 // import MovieGif from './assets/371.gif'
@@ -44,7 +46,11 @@ function App() {
 
       ) : (
           <div className="App">
-            <NavBar />
+            <UserProvider>
+              <MoviesProvider>
+                <NavBar />
+              </MoviesProvider>
+            </UserProvider>
           </div>)}
     </>
   );
