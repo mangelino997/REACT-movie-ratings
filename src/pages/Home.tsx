@@ -1,14 +1,20 @@
 import React, { useContext } from 'react'
+import { Link } from 'react-router-dom';
 import Movie from '../components/Movie';
 import SearchForm from '../components/SearchForm';
 import MoviesContext from '../context/MoviesContext';
+import IconArrowRight from '../icons/arrowRight';
+import IconStars from '../icons/stars';
 // import IconArrowRight from '../icons/arrowRight';  //npm install @types/react
 
 const Home = () => {
 
+
     // consumer the movie context
     const { movieList, loadingSearchMovies } = useContext(MoviesContext);
 
+    // order list for rating desc
+    movieList.sort((a: any, b: any) => (a.fields.rating < b.fields.rating) ? 1 : -1)
     const loading = loadingSearchMovies ?
         (
             <div className="row justify-content-center py-5">
@@ -41,6 +47,44 @@ const Home = () => {
                 </div>
             </div>
             {loading}
+            <div className="row">
+                <div className="col-md-5">
+                    <table className="table table-sm">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Title</th>
+                                <th scope="col">Rating</th>
+                                <th scope="col">-</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {
+
+                                movieList.map((m: any, index: number) => (
+                                    <tr key={m.pk} >
+                                        <th scope="row">{index}</th>
+                                        <td>{m.fields.title}</td>
+                                        <td>
+                                            {m.fields.rating}
+                                            <IconStars key={index}
+                                            className="rotate-vert-center"
+                                                width={20} height={20}
+                                                stroke="#FF8222" fill="#FF8222" />
+                                        </td>
+                                        <td>
+                                            <Link to={`/details/${m.pk}`} >
+                                                <span>details</span><IconArrowRight />
+                                            </Link>
+                                        </td>
+                                    </tr>
+                                ))
+                            }
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </>
     )
 }

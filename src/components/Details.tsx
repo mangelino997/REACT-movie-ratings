@@ -8,7 +8,6 @@ const Details = () => {
 
     const { movieId }: any = useParams();
     const movie = getMovieById(movieId);
-    console.log(movie);
 
     return (
         <div className="container">
