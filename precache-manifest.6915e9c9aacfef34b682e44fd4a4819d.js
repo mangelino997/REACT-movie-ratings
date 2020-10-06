@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "88635ffe6490d6debecb6d2da9c44325",
+    "revision": "17a3ae6fee4743ec888bb51ef77eba3d",
     "url": "/REACT-movie-ratings/index.html"
   },
   {
-    "revision": "397cb7f39021661aa1fa",
-    "url": "/REACT-movie-ratings/static/css/main.901cd10f.chunk.css"
+    "revision": "18360458e629fc05c060",
+    "url": "/REACT-movie-ratings/static/css/main.a6c31fbe.chunk.css"
   },
   {
-    "revision": "476eece6ae381e338af2",
-    "url": "/REACT-movie-ratings/static/js/2.14723a25.chunk.js"
+    "revision": "aa800b91faedde6b2dde",
+    "url": "/REACT-movie-ratings/static/js/2.bee7b5bf.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/REACT-movie-ratings/static/js/2.14723a25.chunk.js.LICENSE.txt"
+    "url": "/REACT-movie-ratings/static/js/2.bee7b5bf.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "397cb7f39021661aa1fa",
-    "url": "/REACT-movie-ratings/static/js/main.f2859ff5.chunk.js"
+    "revision": "18360458e629fc05c060",
+    "url": "/REACT-movie-ratings/static/js/main.2776a827.chunk.js"
   },
   {
     "revision": "e384393050b791751b39",
