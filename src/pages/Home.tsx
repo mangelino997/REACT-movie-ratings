@@ -11,7 +11,14 @@ const Home = () => {
 
 
     // consumer the movie context
-    const { movieList, loadingSearchMovies } = useContext(MoviesContext);
+    const { movieList, movieListSearch, loadingSearchMovies } = useContext(MoviesContext);
+
+    //
+    const list = movieListSearch ? movieListSearch : movieList;
+
+    // get top 20 of the ranking
+    const moviesListRanking = movieList.length > 20 ?
+        movieList.splice(20, (movieList.length - 20)) : movieList;
 
     // order list for rating desc
     movieList.sort((a: any, b: any) => (a.fields.rating < b.fields.rating) ? 1 : -1)
@@ -27,17 +34,19 @@ const Home = () => {
             </div>
         ) : (
             <div>
+                {movieListSearch ? (movieListSearch.length === 0 &&
+                    <small style={{color: '#FF4E56'}}>Not found</small>)
+                    : null}
                 <div className="row flex-nowrap overflow-auto">
                     {
-                        movieList.map((m: any) => (
+                        list.map((m: any) => (
                             <Movie key={m.pk} movie={m} />
                         ))
                     }
                 </div>
-                <p className="title-movies my-3">Ranking</p>
+                <p className="title-movies my-3">Top Ranking</p>
             </div>
         )
-
     return (
         <>
             <p className="title-movies my-5">Movies</p>
@@ -53,25 +62,24 @@ const Home = () => {
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
-                                <th scope="col">Title</th>
                                 <th scope="col">Rating</th>
+                                <th scope="col">Title</th>
                                 <th scope="col">-</th>
                             </tr>
                         </thead>
                         <tbody>
                             {
-
-                                movieList.map((m: any, index: number) => (
+                                moviesListRanking.map((m: any, index: number) => (
                                     <tr key={m.pk} >
-                                        <th scope="row">{index}</th>
-                                        <td>{m.fields.title}</td>
+                                        <th scope="row">{index + 1}</th>
                                         <td>
                                             {m.fields.rating}
                                             <IconStars key={index}
-                                            className="rotate-vert-center"
-                                                width={20} height={20}
+                                                className="rotate-vert-center"
+                                                width={18} height={18}
                                                 stroke="#FF8222" fill="#FF8222" />
                                         </td>
+                                        <td>{m.fields.title}</td>
                                         <td>
                                             <Link to={`/details/${m.pk}`} >
                                                 <span>details</span><IconArrowRight />

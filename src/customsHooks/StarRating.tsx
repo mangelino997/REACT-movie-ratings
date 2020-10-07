@@ -34,14 +34,21 @@ const StarRating = (props: any) => {
             <div className="text-center">
                 <h4>{rating} stars</h4>
                 <button 
-                type="button" className="btn btn-sm btn-success btn-login">
-                    Rate
+                type="button" 
+                className="btn btn-sm btn-success btn-login btn-success-shadow">
+                    Rank
                 </button>
-                <button
+                <button 
+                type="button" 
+                className="btn btn-sm btn-secondary btn-login ml-2 btn-second-shadow"
+                onClick={() => setRating(0)}>
+                    Reset
+                </button>
+                {/* <button
                     className="btn-reset-stars"
                     onClick={() => setRating(0)}>
                     <IconReset />
-                </button>
+                </button> */}
 
             </div>
         </div>

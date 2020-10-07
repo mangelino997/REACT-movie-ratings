@@ -8,6 +8,7 @@ const initialMovies = movies;
 const MoviesProvider = ({ children }) => {
 
     const [movieList, setMovieList] = useState(initialMovies);
+    const [movieListSearch, setMovieListSearch] = useState(null);
     const [loadingSearchMovies, setLoadingSearchMovies] = useState(false);
 
     // handle search movies
@@ -20,7 +21,7 @@ const MoviesProvider = ({ children }) => {
         });
         setTimeout(()=>{
             setLoadingSearchMovies(false);
-            setMovieList(newMovieList);
+            setMovieListSearch(newMovieList);
         }, 1800)
     }
 
@@ -29,11 +30,11 @@ const MoviesProvider = ({ children }) => {
         setLoadingSearchMovies(true);
         setTimeout(()=>{
             setLoadingSearchMovies(false);
-            setMovieList(initialMovies);
+            setMovieListSearch(null);
         }, 1800)
      }
 
-    const data = { movieList, loadingSearchMovies, searchMoviesList, clearSearchMoviesList }
+    const data = { movieList, movieListSearch, loadingSearchMovies, searchMoviesList, clearSearchMoviesList }
 
     return (
         <MoviesContext.Provider value={data}>
