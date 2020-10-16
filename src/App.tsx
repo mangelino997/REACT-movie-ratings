@@ -4,8 +4,9 @@ import NavBar from './components/NavBar';
 import { MoviesProvider } from './context/MoviesContext';
 import { UserProvider } from './context/UserContext';
 import IconStars from './icons/stars';
+import axios from 'axios';
 
-// import MovieGif from './assets/371.gif'
+axios.defaults.baseURL = 'http://localhost:8080/v1';
 function App() {
 
   const [loading, setLoading] = useState({

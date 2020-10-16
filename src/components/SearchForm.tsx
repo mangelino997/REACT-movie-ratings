@@ -8,7 +8,6 @@ const SearchForm = () => {
 
     const handleChange = (e: any) => {
         setSearch( e.target.value)
-        console.log(search)
     }
 
     // handle search movies

@@ -11,8 +11,8 @@ const Movie = ({movie} : any) => {
                         <img src={movie.imageURL} className="imageURL" alt="movie" />
                     </div>
                     <div className="flip-card-back">
-                        <p className="title-back-card">{movie.fields.title}</p>
-                        <Link to={`/details/${movie.pk}`} className="bottom-right">
+                        <p className="title-back-card">{movie.title}</p>
+                        <Link to={`/details/${movie._id}`} className="bottom-right">
                             <span>details</span><IconArrowRight />
                         </Link>
 

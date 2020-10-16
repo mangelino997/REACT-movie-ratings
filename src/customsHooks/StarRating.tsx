@@ -1,12 +1,27 @@
-import React, { useEffect, useState } from 'react'
-import IconReset from '../icons/reset';
+import React, { useContext, useEffect, useState } from 'react'
 import IconStars from '../icons/stars'
 import './starRating.css'
+import UserContext from '../context/UserContext';
 const StarRating = (props: any) => {
 
     const [rating, setRating] = useState(0);
     const [hover, setHover] = useState(0);
 
+    // consumer the user context
+    const { user } = useContext(UserContext);
+    // handle the rank current movie
+    const rankCurrentMovie = () => {
+        if (!user.credentials.email) {
+            alert("You must Sign In")
+            return
+        }
+        const el = {
+            emailUser: user.credentials.email,
+            idMovie: props.idMovie,
+            stars: rating
+        }
+        props.newScore(rating, el)
+    }
     useEffect(() => {
 
     }, [rating])
@@ -33,15 +48,17 @@ const StarRating = (props: any) => {
             })}
             <div className="text-center">
                 <h4>{rating} stars</h4>
-                <button 
-                type="button" 
-                className="btn btn-sm btn-success btn-login btn-success-shadow">
+                <button
+                    type="button"
+                    onClick={() => rankCurrentMovie()}
+                    disabled={rating === 0}
+                    className="btn btn-sm btn-success btn-login btn-success-shadow">
                     Rank
                 </button>
-                <button 
-                type="button" 
-                className="btn btn-sm btn-secondary btn-login ml-2 btn-second-shadow"
-                onClick={() => setRating(0)}>
+                <button
+                    type="button"
+                    className="btn btn-sm btn-secondary btn-login ml-2 btn-second-shadow"
+                    onClick={() => setRating(0)}>
                     Reset
                 </button>
                 {/* <button

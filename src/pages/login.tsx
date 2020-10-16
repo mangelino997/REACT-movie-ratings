@@ -1,8 +1,23 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useContext } from 'react'
+import { useForm } from 'react-hook-form';
+import { Link, useHistory } from 'react-router-dom'
 import IconPopcorn from '../assets/popcorn.png'
+import UserContext from '../context/UserContext';
 
+type Inputs = {
+    email: string,
+    password: string,
+};
 const Login = () => {
+
+    const { register, handleSubmit, watch, errors } = useForm<Inputs>();
+    const { signin, user } = useContext(UserContext)
+    const history = useHistory();
+
+    const onSubmit = (userData: any) => {
+        signin(userData, history)
+    }
+
     return (
         <div className="container">
             <div className="row justify-content-center my-5">
@@ -16,20 +31,42 @@ const Login = () => {
 
                     <div className="row justify-content-center my-4">
                         <div className="col">
-                            <form>
+                            <form onSubmit={handleSubmit(onSubmit)}>
                                 <div className="">
                                     <input
-                                        name="username" type="text"
-                                        placeholder="username"
-                                        className="form-control input-login" />
+                                        id="validationServer03"
+                                        name="email" type="email"
+                                        placeholder="user@gmail.com"
+                                        className="form-control input-login"
+                                        ref={register({ required: true })} />
+                                    {errors.email &&
+                                        (
+                                            <p
+                                                id="validationServer03Feedback"
+                                                className="invalid-feedback">
+                                                This field is required
+                                            </p>
+                                        )}
                                 </div>
                                 <br />
                                 <div className="">
                                     <input
                                         name="password" type="password"
                                         placeholder="password"
-                                        className="form-control input-login" />
-                                </div><br/>
+                                        className="form-control input-login"
+                                        ref={register({ required: true })} />
+                                    {errors.password &&
+                                        (
+                                            <p
+                                                id="validationServer03Feedback"
+                                                className="invalid-feedback">
+                                                This field is required
+                                            </p>
+                                        )}
+                                </div><br />
+                                {user.error &&
+                                    (<p className="invalid-feedback">{user.error}</p>)
+                                }
                                 <div className="row my-1">
                                     <div className="col-md-3">
                                         <button
