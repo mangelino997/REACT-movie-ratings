@@ -6,7 +6,8 @@ import { UserProvider } from './context/UserContext';
 import IconStars from './icons/stars';
 import axios from 'axios';
 
-axios.defaults.baseURL = 'http://localhost:8080/v1';
+// axios.defaults.baseURL = 'http://localhost:8080/v1';
+axios.defaults.baseURL = 'https://app-rest-movies-ratings.herokuapp.com/v1';
 function App() {
 
   const [loading, setLoading] = useState({
